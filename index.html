@@ -90,6 +90,18 @@ footer{border-top:1px solid var(--line);padding:56px 0 24px;font-size:.82rem;col
 .f{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:2rem}
 footer h4{color:var(--y);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.8rem}
 footer p{margin-bottom:.3rem}
+.fh{list-style:none;padding:0}
+.fh li{display:flex;justify-content:space-between;gap:1rem;padding:.35rem 0;border-bottom:1px dotted #333;font-size:.8rem}
+.fh li span{color:var(--t);white-space:nowrap}
+.fh li.off span{color:#e8604c;font-weight:700}
+.fh li.hoy b{color:var(--y)}
+.fh li.hoy::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--y);align-self:center;margin-right:-.5rem;order:-1}
+.estado{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.78rem;margin-bottom:.7rem!important}
+.estado::before{content:"";width:8px;height:8px;border-radius:50%;background:#e8604c}
+.estado.on{color:#6fd18b}
+.estado.on::before{background:#6fd18b}
+.estado.off{color:#e8604c}
+.nota{font-size:.72rem;color:var(--m);margin-top:.7rem}
 .legal{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2.4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.7rem;color:var(--m)}
 #lb{position:fixed;inset:0;background:#000d;z-index:99;display:none;align-items:center;justify-content:center;padding:1rem;cursor:zoom-out}
 #lb.on{display:flex}
@@ -132,7 +144,7 @@ footer p{margin-bottom:.3rem}
    <div class="chips"><span><b>●</b> Comer aquí</span><span><b>➜</b> Para llevar</span><a href="tel:+34868150377"><b>☎</b> 868 150 377</a></div>
   </div>
   <div class="disc">
-   <div id="durum3d" role="img" aria-label="Kebab girando en 3D. Arrastra para moverlo"><img src="imagenes/plato-kebab.jpg" alt="Plato de kebab con patatas"></div>
+   <div id="durum3d" role="img" aria-label="Kebab girando en 3D. Arrastra para moverlo"><img src="plato-kebab.jpg" alt="Plato de kebab con patatas"></div>
    <p class="hint">Arrastra el kebab para girarlo</p>
   </div>
  </div>
@@ -146,13 +158,13 @@ footer p{margin-bottom:.3rem}
    <p>Algunas de las opciones del restaurante, con los precios del tablón.</p>
   </div>
   <div class="grid">
-   <article class="card"><img src="imagenes/plato-kebab.jpg" alt="Plato de kebab con patatas" loading="lazy"><div><h3>Plato kebab</h3><p>Carne de kebab con patatas y acompañamiento.</p><span class="price">7,00€ <a href="tel:+34868150377">Pedir</a></span></div></article>
-   <article class="card"><img src="imagenes/durum-kebab.jpg" alt="Durum kebab con patatas y salsas" loading="lazy"><div><h3>Durum kebab</h3><p>Durum enrollado con carne, verduras y salsas.</p><span class="price">5,50€ <small>XL 7,50€</small> <a href="tel:+34868150377">Pedir</a></span></div></article>
-   <article class="card"><img src="imagenes/plato-gratinado.jpg" alt="Sultán gratinado en cazuela" loading="lazy"><div><h3>Sultán gratinado</h3><p>Cazuela gratinada con queso fundido.</p><span class="price">7,50€ <a href="tel:+34868150377">Pedir</a></span></div></article>
-   <article class="card"><img src="imagenes/bocados-pollo.jpg" alt="Nuggets o bocados de pollo" loading="lazy" style="object-position:50% 60%"><div><h3>Bocados de pollo</h3><p>Porción de bocados crujientes de pollo.</p><span class="price">4,50€ <a href="tel:+34868150377">Pedir</a></span></div></article>
-   <article class="card"><img src="imagenes/pizza.jpg" alt="Pizza preparada" loading="lazy" style="object-position:50% 58%"><div><h3>Pizza</h3><p>Pizza preparada para disfrutar en el local.</p><span class="price">Consultar <a href="tel:+34868150377">Llamar</a></span></div></article>
-   <article class="card"><img src="imagenes/tacos.jpg" alt="Tacos, la novedad del local" loading="lazy" style="object-position:50% 62%"><div><h3>Tacos</h3><p>La novedad del local, para probar.</p><span class="price">Consultar <a href="tel:+34868150377">Llamar</a></span></div></article>
-   <article class="card"><img src="imagenes/carta-flyer.jpg" alt="Carta del restaurante" loading="lazy" style="object-position:50% 25%"><div><h3>Carta completa</h3><p>Todas las opciones y precios, en una sola lista.</p><span class="price"><a href="#carta">Ver carta ↓</a></span></div></article>
+   <article class="card"><img src="plato-kebab.jpg" alt="Plato de kebab con patatas" loading="lazy"><div><h3>Plato kebab</h3><p>Carne de kebab con patatas y acompañamiento.</p><span class="price">7,00€ <a href="tel:+34868150377">Pedir</a></span></div></article>
+   <article class="card"><img src="durum-kebab.jpg" alt="Durum kebab con patatas y salsas" loading="lazy"><div><h3>Durum kebab</h3><p>Durum enrollado con carne, verduras y salsas.</p><span class="price">5,50€ <small>XL 7,50€</small> <a href="tel:+34868150377">Pedir</a></span></div></article>
+   <article class="card"><img src="plato-gratinado.jpg" alt="Sultán gratinado en cazuela" loading="lazy"><div><h3>Sultán gratinado</h3><p>Cazuela gratinada con queso fundido.</p><span class="price">7,50€ <a href="tel:+34868150377">Pedir</a></span></div></article>
+   <article class="card"><img src="bocados-pollo.jpg" alt="Nuggets o bocados de pollo" loading="lazy" style="object-position:50% 60%"><div><h3>Bocados de pollo</h3><p>Porción de bocados crujientes de pollo.</p><span class="price">4,50€ <a href="tel:+34868150377">Pedir</a></span></div></article>
+   <article class="card"><img src="pizza.jpg" alt="Pizza preparada" loading="lazy" style="object-position:50% 58%"><div><h3>Pizza</h3><p>Pizza preparada para disfrutar en el local.</p><span class="price">Consultar <a href="tel:+34868150377">Llamar</a></span></div></article>
+   <article class="card"><img src="tacos.jpg" alt="Tacos, la novedad del local" loading="lazy" style="object-position:50% 62%"><div><h3>Tacos</h3><p>La novedad del local, para probar.</p><span class="price">Consultar <a href="tel:+34868150377">Llamar</a></span></div></article>
+   <article class="card"><img src="carta-flyer.jpg" alt="Carta del restaurante" loading="lazy" style="object-position:50% 25%"><div><h3>Carta completa</h3><p>Todas las opciones y precios, en una sola lista.</p><span class="price"><a href="#carta">Ver carta ↓</a></span></div></article>
   </div>
  </div>
 </section>
@@ -160,7 +172,7 @@ footer p{margin-bottom:.3rem}
 <section id="carta" style="padding-top:0">
  <div class="wrap">
   <div class="carta">
-   <img src="imagenes/carta-flyer.jpg" alt="Carta de Don Kebab Roldán con fotos y extras" loading="lazy">
+   <img src="carta-flyer.jpg" alt="Carta de Don Kebab Roldán con fotos y extras" loading="lazy">
    <div>
     <span class="eyebrow">La carta del restaurante</span>
     <h2>Precios del tablón</h2>
@@ -185,14 +197,14 @@ footer p{margin-bottom:.3rem}
    <p>Fotografías reales de Don Kebab Roldán.</p>
   </div>
   <div class="gal">
-   <figure><img src="imagenes/fachada.jpg" alt="Fachada de Don Kebab" loading="lazy"><figcaption>La fachada</figcaption></figure>
-   <figure><img src="imagenes/fachada-noche.jpg" alt="Entrada del local de noche" loading="lazy"><figcaption>De noche</figcaption></figure>
-   <figure><img src="imagenes/mostrador.jpg" alt="Mostrador del restaurante" loading="lazy" style="object-position:50% 40%"><figcaption>Mostrador</figcaption></figure>
-   <figure><img src="imagenes/zona-atencion.jpg" alt="Zona de atención y comedor" loading="lazy"><figcaption>Zona de atención</figcaption></figure>
-   <figure><img src="imagenes/interior.jpg" alt="Interior del local" loading="lazy"><figcaption>Interior</figcaption></figure>
-   <figure><img src="imagenes/esquina-noche.jpg" alt="Esquina del local de noche" loading="lazy"><figcaption>Esquina</figcaption></figure>
-   <figure><img src="imagenes/vista-exterior.jpg" alt="Vista exterior del local" loading="lazy"><figcaption>Exterior</figcaption></figure>
-   <figure><img src="imagenes/tablon-menu.jpg" alt="Tablón de menú del local" loading="lazy"><figcaption>El menú</figcaption></figure>
+   <figure><img src="fachada.jpg" alt="Fachada de Don Kebab" loading="lazy"><figcaption>La fachada</figcaption></figure>
+   <figure><img src="fachada-noche.jpg" alt="Entrada del local de noche" loading="lazy"><figcaption>De noche</figcaption></figure>
+   <figure><img src="mostrador.jpg" alt="Mostrador del restaurante" loading="lazy" style="object-position:50% 40%"><figcaption>Mostrador</figcaption></figure>
+   <figure><img src="zona-atencion.jpg" alt="Zona de atención y comedor" loading="lazy"><figcaption>Zona de atención</figcaption></figure>
+   <figure><img src="interior.jpg" alt="Interior del local" loading="lazy"><figcaption>Interior</figcaption></figure>
+   <figure><img src="esquina-noche.jpg" alt="Esquina del local de noche" loading="lazy"><figcaption>Esquina</figcaption></figure>
+   <figure><img src="vista-exterior.jpg" alt="Vista exterior del local" loading="lazy"><figcaption>Exterior</figcaption></figure>
+   <figure><img src="tablon-menu.jpg" alt="Tablón de menú del local" loading="lazy"><figcaption>El menú</figcaption></figure>
   </div>
  </div>
 </section>
@@ -218,7 +230,20 @@ footer p{margin-bottom:.3rem}
    <div><span class="logo" style="font-size:1.4rem">DON KEBAB</span><p style="margin-top:.6rem">Kebab, durum y platos para disfrutar.</p></div>
    <div><h4>Contacto</h4><p><a href="tel:+34868150377">868 150 377</a></p><p>Avenida Murcia, 30709 Roldán (Torre-Pacheco)</p></div>
    <div><h4>Servicios</h4><p>Comer en el local</p><p>Pedidos para llevar</p></div>
-   <div><h4>Horario</h4><p>Jueves a martes: 12:30–16:00 y 19:00–23:30.</p><p>Miércoles cerrado por descanso del personal, excepto festivos.</p></div>
+   <div>
+    <h4>Horario</h4>
+    <p id="estado" class="estado"></p>
+    <ul class="fh">
+     <li data-d="1"><b>Lunes</b><span>12:30–16:00 · 19:00–23:30</span></li>
+     <li data-d="2"><b>Martes</b><span>12:30–16:00 · 19:00–23:30</span></li>
+     <li data-d="3" class="off"><b>Miércoles</b><span>Cerrado</span></li>
+     <li data-d="4"><b>Jueves</b><span>12:30–16:00 · 19:00–23:30</span></li>
+     <li data-d="5"><b>Viernes</b><span>12:30–16:00 · 19:00–23:30</span></li>
+     <li data-d="6"><b>Sábado</b><span>12:30–16:00 · 19:00–23:30</span></li>
+     <li data-d="0"><b>Domingo</b><span>12:30–16:00 · 19:00–23:30</span></li>
+    </ul>
+    <p class="nota">Los miércoles cerramos por descanso del personal, excepto festivos.</p>
+   </div>
   </div>
   <div class="legal"><span>© 2026 Don Kebab Roldán</span><span>Hecho para disfrutar del buen kebab.</span></div>
  </div>
@@ -237,13 +262,48 @@ document.querySelectorAll('.card img,.carta img,.gal figure').forEach(el=>el.add
 lb.onclick=()=>lb.classList.remove('on');
 addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
 
+/* Horario: marca el día de hoy y muestra si está abierto, en directo */
+(function(){
+ const e=document.getElementById('estado');
+ if(!e)return;
+ const TRAMOS=[[750,960],[1140,1410]]; /* 12:30–16:00 y 19:00–23:30 */
+ const CERRADO=3; /* miércoles */
+ const NOMBRES=['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+ const hh=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+ function actualizar(){
+  const ahora=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Madrid'}));
+  const dia=ahora.getDay(),min=ahora.getHours()*60+ahora.getMinutes();
+  document.querySelectorAll('.fh li').forEach(li=>li.classList.toggle('hoy',+li.dataset.d===dia));
+  const tramos=dia===CERRADO?[]:TRAMOS;
+  const actual=tramos.find(t=>min>=t[0]&&min<t[1]);
+  let txt;
+  if(actual){
+   txt='Abierto ahora · cierra a las '+hh(actual[1]);
+  }else{
+   const sig=tramos.find(t=>t[0]>min);
+   if(sig){txt='Cerrado ahora · abre hoy a las '+hh(sig[0]);}
+   else{
+    let i=1;while((dia+i)%7===CERRADO)i++;
+    const d=(dia+i)%7;
+    txt='Cerrado ahora · abre '+(i===1?'mañana':'el '+NOMBRES[d])+' a las '+hh(TRAMOS[0][0]);
+   }
+  }
+  e.textContent=txt;
+  e.classList.toggle('on',!!actual);
+  e.classList.toggle('off',!actual);
+ }
+ actualizar();
+ setInterval(actualizar,30000);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)actualizar()});
+})();
+
 /* Kebab giratorio 3D (cono de carne) + vídeo real opcional */
 (function(){
  const box=document.getElementById('durum3d');
  let stop=false;
- /* Si existe imagenes/kebab.mp4 (vídeo real), sustituye al 3D */
+ /* Si existe kebab.mp4 (vídeo real), sustituye al 3D */
  const v=document.createElement('video');
- v.src='imagenes/kebab.mp4';v.muted=true;v.loop=true;v.autoplay=true;v.playsInline=true;
+ v.src='kebab.mp4';v.muted=true;v.loop=true;v.autoplay=true;v.playsInline=true;
  v.addEventListener('loadeddata',()=>{stop=true;box.innerHTML='';box.appendChild(v);v.play()});
  if(!window.THREE)return;
  try{
