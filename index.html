@@ -1,67 +1,309 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#080808">
-<meta name="description" content="Don Kebab Roldán. Kebab, durum y platos para comer aquí o pedir para llevar.">
-<title>Don Kebab Roldán | Sabor que apetece</title>
+<title>Don Kebab Roldán · Kebab, durum y platos</title>
+<meta name="description" content="Don Kebab Roldán: kebab, durum, platos y pizza para comer en el local o llevar. Llama al 868 150 377.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#080909;--panel:#111313;--white:#f7f7f4;--muted:#b9b9b4;--line:#333633;--gold:#f4b323;--max:1220px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}img{display:block;width:100%;object-fit:cover}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(7,8,8,.95);backdrop-filter:blur(14px);border-bottom:1px solid #292b29}
-.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-family:"Barlow Condensed",sans-serif;font-size:27px;font-weight:800;line-height:.85;letter-spacing:.4px}.brand small{display:block;font-family:Inter,sans-serif;font-size:10px;letter-spacing:4px;text-align:center;margin-top:8px}.brand-mark{font-size:36px;color:var(--gold)}nav{display:flex;align-items:center;gap:26px;font-size:12px;text-transform:uppercase;color:#deded9}nav a:hover{color:var(--gold)}.nav-right{display:flex;align-items:center;gap:16px}.phone-top{font-size:13px;font-weight:700;white-space:nowrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:14px 22px;font-weight:800;font-size:12px;text-transform:uppercase;transition:.2s;cursor:pointer}.btn-gold{background:var(--gold);color:#111}.btn-gold:hover{background:#ffd05c;transform:translateY(-2px)}.btn-outline{border:1px solid #888;background:transparent;color:white}.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-.hero{position:relative;isolation:isolate;min-height:570px;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid #292b29}.hero-bg{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(0,0,0,.93) 0%,rgba(0,0,0,.74) 45%,rgba(0,0,0,.35) 100%),url('images/img_0393-mejorada.jpg') center 48%/cover}.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#080909 0%,transparent 25%,transparent 75%,rgba(0,0,0,.2))}.hero-content{padding:75px 0;max-width:660px}.eyebrow{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:3px;font-size:11px}.hero h1{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:clamp(58px,8vw,104px);line-height:.86;letter-spacing:-2px;margin:18px 0}.hero h1 span{display:block;color:var(--gold);font-size:.42em;letter-spacing:8px;margin-top:18px}.hero p{color:#e0e0dc;font-size:18px;line-height:1.65;max-width:490px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.service-row{display:flex;gap:25px;margin-top:35px;color:#e7e7e3;font-size:12px}.service-row span{display:flex;align-items:center;gap:8px}.service-row b{color:var(--gold);font-size:19px}
-.durum-float{position:absolute;right:5%;bottom:5%;width:clamp(130px,19vw,245px);filter:drop-shadow(0 15px 30px #000);animation:float 4s ease-in-out infinite}.durum-float img{border-radius:50%;aspect-ratio:1;object-fit:cover;border:2px solid #ffffff22}@keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(4deg)}}
-section{padding:72px 0}.section-head{text-align:center;margin:0 auto 32px}.section-head .eyebrow{font-size:10px}.section-head h2{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:clamp(36px,5vw,54px);margin:8px 0;letter-spacing:.5px}.section-head p{color:var(--muted);margin:0;line-height:1.6}.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.food-card{border:1px solid #343734;border-radius:12px;overflow:hidden;background:linear-gradient(145deg,#141615,#090a0a);transition:.25s}.food-card:hover{transform:translateY(-4px);border-color:#8e6b22}.food-card img{height:190px;background:#181818}.food-card .info{padding:16px}.food-card h3{font-size:15px;text-transform:uppercase;margin:0 0 8px}.food-card p{font-size:12px;color:#c7c7c2;line-height:1.55;min-height:38px;margin:0 0 12px}.food-card .price{font-size:21px;font-weight:800;color:var(--gold)}.menu-note{margin-top:22px;text-align:center;color:#a9aaa5;font-size:12px}
-.menu-board{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:center;background:#111313;border:1px solid var(--line);border-radius:18px;padding:22px}.menu-board img{max-height:540px;object-fit:contain;background:#fff;border-radius:10px}.menu-board h3{font-family:"Barlow Condensed",sans-serif;font-size:38px;margin:0 0 12px}.menu-board p{color:var(--muted);line-height:1.7}.gallery{background:#0d0f0e}.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.gallery-item{position:relative;overflow:hidden;border-radius:10px;border:1px solid #343734;background:#161817}.gallery-item img{height:220px;transition:transform .4s}.gallery-item:hover img{transform:scale(1.05)}.gallery-item span{display:block;padding:12px 14px;font-size:12px;font-weight:700;text-transform:uppercase}.callout{display:flex;align-items:center;justify-content:space-between;gap:24px;border:1px solid #4a3a16;background:linear-gradient(110deg,#1c180d,#101110 60%);border-radius:16px;padding:28px}.callout h2{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;font-size:34px;margin:0 0 6px}.callout p{color:#c6c6bf;margin:0}
-footer{border-top:1px solid var(--line);padding:35px 0 20px;background:#050606}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:25px}.footer-brand{font-family:"Barlow Condensed",sans-serif;font-size:30px;font-weight:800}.footer-grid h4{font-size:12px;text-transform:uppercase;color:var(--gold);letter-spacing:1px}.footer-grid p,.footer-grid a{font-size:12px;color:#c6c6c0;line-height:1.8}.copyright{border-top:1px solid #252725;margin-top:24px;padding-top:18px;display:flex;justify-content:space-between;color:#8f908b;font-size:11px}.mobile-call{display:none}
-@media(max-width:900px){nav{gap:14px}.phone-top{display:none}.menu-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}.hero{min-height:540px}.durum-float{right:3%;bottom:3%;width:145px}.footer-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.wrap{width:min(100% - 28px,var(--max))}.nav{height:68px}.brand{font-size:23px}.brand-mark{font-size:28px}nav{display:none}.nav-right .btn{padding:11px 13px;font-size:10px}.hero{min-height:620px;align-items:flex-start}.hero-bg{background-position:58% center}.hero-content{padding:64px 0 180px}.hero h1{font-size:64px}.hero p{font-size:15px;max-width:320px}.service-row{gap:14px;flex-wrap:wrap;margin-top:25px}.durum-float{width:112px;right:5%;bottom:14px}.hero-actions .btn{padding:13px 16px}section{padding:52px 0}.menu-grid{gap:10px}.food-card img{height:135px}.food-card .info{padding:12px}.food-card h3{font-size:12px}.food-card p{font-size:11px;min-height:52px}.food-card .price{font-size:18px}.menu-board{grid-template-columns:1fr;padding:14px}.menu-board img{max-height:400px}.gallery-grid{gap:9px}.gallery-item img{height:140px}.gallery-item span{font-size:10px;padding:10px}.callout{align-items:flex-start;flex-direction:column;padding:22px}.footer-grid{grid-template-columns:1fr 1fr;gap:14px}.footer-brand{font-size:25px}.copyright{gap:12px;flex-direction:column}.mobile-call{display:flex;position:fixed;z-index:30;bottom:12px;left:12px;right:12px;box-shadow:0 8px 30px #0009}.mobile-call .btn{width:100%;padding:15px}.copyright{padding-bottom:64px}}
+:root{--bg:#070808;--bg2:#0d0f0f;--card:#141515;--line:#232525;--y:#f5b324;--t:#f4f1ea;--m:#a8a8a0}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--t);font:400 16px/1.6 Inter,system-ui,sans-serif}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.logo{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:700;line-height:1}
+.wrap{width:min(1180px,92%);margin:auto}
+.eyebrow{color:var(--y);font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:99px;font-weight:700;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;border:1px solid #fff5;transition:.2s;cursor:pointer;background:none;color:var(--t)}
+.btn:hover{border-color:var(--y);color:var(--y)}
+.btn.y{background:var(--y);border-color:var(--y);color:#111}
+.btn.y:hover{background:#ffc94d;color:#111}
+:focus-visible{outline:2px solid var(--y);outline-offset:3px}
+/* cabecera */
+header{position:fixed;inset:0 0 auto;z-index:50;background:#070808e6;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.6rem;font-size:1.5rem;letter-spacing:.01em}
+.logo small{display:block;font:700 .55rem Inter;letter-spacing:.35em;color:var(--m);margin-top:3px}
+nav{display:flex;gap:1.8rem;font-size:.75rem;letter-spacing:.04em;text-transform:uppercase}
+nav a:hover{color:var(--y)}
+.hd-r{display:flex;align-items:center;gap:1rem;font-size:.8rem;font-weight:700}
+/* inicio */
+#inicio{min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;background:radial-gradient(ellipse at 75% 50%,#1d1708 0,var(--bg) 62%)}
+#inicio .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+h1{font-size:clamp(4rem,9vw,7rem);letter-spacing:-.01em;margin:.6rem 0 .2rem}
+.sub{font-size:clamp(1.6rem,3.4vw,2.4rem);letter-spacing:.3em;color:var(--y);font-family:'Barlow Condensed';font-weight:700;display:flex;align-items:center;gap:1rem}
+.sub::before,.sub::after{content:"";width:28px;height:4px;background:var(--y)}
+.lead{max-width:34rem;margin:1.2rem 0 1.6rem;color:#e6e3dc}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:1.8rem;font-size:.75rem;color:#dcd9d1}
+.chips b{color:var(--y)}
+.disc{position:relative;width:min(440px,86vw);aspect-ratio:1;margin:auto}
+#durum3d{position:absolute;inset:0;cursor:grab;touch-action:pan-y}
+#durum3d:active{cursor:grabbing}
+#durum3d img,#durum3d video{width:100%;height:100%;object-fit:contain;-webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent 100%);mask-image:radial-gradient(closest-side,#000 70%,transparent 100%)}
+.hint{position:absolute;bottom:-1.6rem;left:0;right:0;text-align:center;font-size:.7rem;color:var(--m)}
+/* secciones */
+section{padding:96px 0}
+.head{text-align:center;margin-bottom:2.6rem}
+h2{font-size:clamp(2.4rem,5vw,3.4rem);margin:.6rem 0 .5rem}
+.head p{color:var(--m);max-width:34rem;margin:auto}
+.grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem}
+.card{width:calc(25% - .75rem);min-width:230px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.card:hover{border-color:#f5b32488;transform:translateY(-3px)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;cursor:zoom-in}
+.card div{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.card h3{font-size:1.05rem;letter-spacing:.04em;text-transform:uppercase}
+.card p{font-size:.78rem;color:var(--m);flex:1}
+.price{color:var(--y);font:700 1.45rem 'Barlow Condensed';display:flex;justify-content:space-between;align-items:baseline}
+.price small{font:500 .72rem Inter;color:var(--m)}
+.price a{font:700 .72rem Inter;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid currentColor}
+/* carta */
+.carta{display:grid;grid-template-columns:.8fr 1.2fr;gap:2.4rem;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:2rem;align-items:center}
+.carta img{border-radius:12px;cursor:zoom-in;max-height:520px;width:100%;object-fit:cover}
+.carta h2{margin:.4rem 0 1rem}
+.list{display:grid;grid-template-columns:1fr 1fr;gap:.2rem 2rem;margin-bottom:1.2rem}
+.list li{list-style:none;display:flex;gap:.5rem;align-items:baseline;font-size:.92rem;padding:.3rem 0;border-bottom:1px dotted #333}
+.list li::after{content:attr(data-p);margin-left:auto;color:var(--y);font-weight:700;order:3;white-space:nowrap}
+.list em{font-style:normal;color:var(--m);font-size:.74rem}
+.xtra{font-size:.8rem;color:var(--m);margin-bottom:1.4rem}
+.xtra b{color:var(--t)}
+#galeria{background:var(--bg2)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.gal figure{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;cursor:zoom-in}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;inset:auto 0 0;padding:1.6rem .9rem .7rem;background:linear-gradient(transparent,#000c);font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.call{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;padding:2rem;border-radius:18px;border:1px solid #f5b32444;background:linear-gradient(120deg,#1f1707,#0d0d0d)}
+.call h2{font-size:2rem;margin:.4rem 0}
+.call p{color:#cfcbc2}
+.hor{margin-top:1rem;padding:1.6rem 2rem;border:1px solid var(--line);border-radius:18px;background:var(--bg2)}
+.hor h3{font-size:1.6rem}
+.hor ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.3rem 2rem;list-style:none;padding:0;margin-top:1rem}
+.hor li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dotted #333;padding:.35rem 0;font-size:.9rem}
+.hor li span{color:var(--y);font-weight:700}
+.hor li.off span{color:#e8604c}
+footer{border-top:1px solid var(--line);padding:56px 0 24px;font-size:.82rem;color:#cfcbc2}
+.f{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:2rem}
+footer h4{color:var(--y);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.8rem}
+footer p{margin-bottom:.3rem}
+.legal{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2.4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.7rem;color:var(--m)}
+#lb{position:fixed;inset:0;background:#000d;z-index:99;display:none;align-items:center;justify-content:center;padding:1rem;cursor:zoom-out}
+#lb.on{display:flex}
+#lb img{max-height:92vh;max-width:96vw;border-radius:10px;object-fit:contain}
+@media(max-width:900px){nav{display:none}#inicio .wrap,.carta{grid-template-columns:1fr}.card{width:calc(50% - .5rem);min-width:0}.gal{grid-template-columns:1fr 1fr}.f{grid-template-columns:1fr 1fr}.hd-r .tel{display:none}#inicio{padding-top:100px}}
+@media(max-width:520px){.list{grid-template-columns:1fr}.card div{padding:.8rem}.f{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav">
-<a class="brand" href="#inicio"><span class="brand-mark">♛</span><span>DON KEBAB<small>ROLDÁN</small></span></a>
-<nav><a href="#inicio">Inicio</a><a href="#menu">Menú</a><a href="#local">Galería</a><a href="#contacto">Contacto</a></nav>
-<div class="nav-right"><a class="phone-top" href="tel:+34868782681">☎ &nbsp;868 78 26 81</a><a class="btn btn-outline" href="tel:+34868782681">☎ Pedir ahora</a></div>
-</div></header>
+
+<header>
+ <div class="wrap">
+  <a href="#inicio" class="logo" aria-label="Don Kebab Roldán, inicio">
+   <svg width="30" height="30" viewBox="0 0 24 24" fill="#f5b324" aria-hidden="true"><path d="M3 18h18l1-11-5 4-5-7-5 7-5-4z"/><rect x="3" y="19" width="18" height="2" rx="1"/></svg>
+   <span>DON KEBAB<small>ROLDÁN</small></span>
+  </a>
+  <nav>
+   <a href="#inicio">Inicio</a><a href="#menu">Menú</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a>
+  </nav>
+  <div class="hd-r">
+   <a class="tel" href="tel:+34868150377">☎ 868 150 377</a>
+   <a class="btn" href="tel:+34868150377">☎ Pedir ahora</a>
+  </div>
+ </div>
+</header>
+
 <main>
-<section class="hero" id="inicio"><div class="hero-bg"></div><div class="wrap"><div class="hero-content">
-<div class="eyebrow">Bienvenido a Roldán</div><h1>Don Kebab<span>— ROLDÁN —</span></h1>
-<p>Tu parada para disfrutar del sabor del kebab. Ven a comer con nosotros o llámanos y prepara tu pedido para llevar.</p>
-<div class="hero-actions"><a class="btn btn-gold" href="#menu">Ver menú&nbsp; ↘</a><a class="btn btn-outline" href="tel:+34868782681">Llamar para pedir</a></div>
-<div class="service-row"><span><b>♨</b> Comer aquí</span><span><b>➜</b> Para llevar</span><span><b>☎</b> 868 78 26 81</span></div>
-</div></div><div class="durum-float"><img src="images/img_0401-mejorada.jpg" alt="Durum preparado en Don Kebab Roldán"></div></section>
-<section id="menu"><div class="wrap"><div class="section-head"><div class="eyebrow">Recién preparado</div><h2>Nuestro menú</h2><p>Algunas de las opciones que aparecen en las fotografías originales del restaurante.</p></div>
-<div class="menu-grid">
-<article class="food-card"><img src="images/img_0400-mejorada.jpg" alt="Plato de kebab con patatas"><div class="info"><h3>Plato kebab</h3><p>Carne de kebab con patatas y acompañamiento.</p><div class="price">Consultar</div></div></article>
-<article class="food-card"><img src="images/img_0401-mejorada.jpg" alt="Durum kebab con patatas y salsas"><div class="info"><h3>Durum kebab</h3><p>Durum enrollado con carne, verduras y salsas.</p><div class="price">Consultar</div></div></article>
-<article class="food-card"><img src="images/img_0399-mejorada.jpg" alt="Nuggets o bocados de pollo"><div class="info"><h3>Bocados de pollo</h3><p>Porción de bocados crujientes de pollo.</p><div class="price">Consultar</div></div></article>
-<article class="food-card"><img src="images/img_0398-mejorada.jpg" alt="Plato gratinado del restaurante"><div class="info"><h3>Plato gratinado</h3><p>Una opción gratinada del menú del local.</p><div class="price">Consultar</div></div></article>
-<article class="food-card"><img src="images/img_0394-mejorada.jpg" alt="Pizza preparada"><div class="info"><h3>Pizza</h3><p>Pizza preparada para disfrutar en el local.</p><div class="price">Consultar</div></div></article>
-<article class="food-card"><img src="images/img_0399-mejorada.jpg" alt="Ración crujiente"><div class="info"><h3>Ración crujiente</h3><p>Una opción para compartir o acompañar.</p><div class="price">Consultar</div></div></article>
-<article class="food-card"><img src="images/img_0400-mejorada.jpg" alt="Plato combinado"><div class="info"><h3>Plato combinado</h3><p>Carne de kebab y guarnición.</p><div class="price">Consultar</div></div></article>
-<article class="food-card"><img src="images/img_0402-mejorada.jpg" alt="Fotografía del tablón original del menú"><div class="info"><h3>Menú completo</h3><p>Consulta aquí el tablón original con las opciones y precios.</p><a class="price" href="#carta">Ver carta ↓</a></div></article>
-</div>
-<p class="menu-note">Los precios se muestran como «Consultar» para no inventar importes: se confirmarán leyendo el tablón original completo.</p>
-</div></section>
-<section id="carta"><div class="wrap"><div class="menu-board"><img src="images/img_0402-mejorada.jpg" alt="Tablón original de precios de Don Kebab Roldán"><div><div class="eyebrow">La carta del restaurante</div><h3>Consulta el menú original</h3><p>Hemos incluido la foto real del tablón que nos has enviado. En una siguiente revisión se puede transcribir plato por plato y añadir cada precio con precisión, evitando publicar cantidades incorrectas.</p><a class="btn btn-gold" href="tel:+34868782681">Llamar para consultar precios</a></div></div></div></section>
-<section class="gallery" id="local"><div class="wrap"><div class="section-head"><div class="eyebrow">Un vistazo al restaurante</div><h2>Nuestro local</h2><p>Fotografías reales que nos has enviado de Don Kebab Roldán.</p></div><div class="gallery-grid">
-<div class="gallery-item"><img src="images/img_0390-mejorada.jpg" alt="Fachada de Don Kebab"><span>La fachada</span></div>
-<div class="gallery-item"><img src="images/img_0391-mejorada.jpg" alt="Mostrador del restaurante"><span>Mostrador</span></div>
-<div class="gallery-item"><img src="images/img_0392-mejorada.jpg" alt="Interior del local"><span>Interior</span></div>
-<div class="gallery-item"><img src="images/img_0393-mejorada.jpg" alt="Zona de atención y comedor"><span>Zona de atención</span></div>
-<div class="gallery-item"><img src="images/img_0387-mejorada.jpg" alt="Vista del interior"><span>Ambiente</span></div>
-<div class="gallery-item"><img src="images/img_0389-mejorada.jpg" alt="Vista exterior del local"><span>Exterior</span></div>
-<div class="gallery-item"><img src="images/img_0395-mejorada.jpg" alt="Tablón de menú del local"><span>El menú</span></div>
-<div class="gallery-item"><img src="images/img_0388-mejorada.jpg" alt="Comida preparada"><span>Algo rico</span></div>
-</div></div></section>
-<section id="contacto"><div class="wrap"><div class="callout"><div><div class="eyebrow">¿Tienes hambre?</div><h2>Tu pedido empieza con una llamada</h2><p>Llama a Don Kebab Roldán para pedir para llevar o consultar cualquier detalle.</p></div><a class="btn btn-gold" href="tel:+34868782681">☎ &nbsp; 868 78 26 81</a></div></div></section>
+<section id="inicio">
+ <div class="wrap">
+  <div>
+   <span class="eyebrow">Bienvenido a Roldán</span>
+   <h1>DON KEBAB</h1>
+   <div class="sub">ROLDÁN</div>
+   <p class="lead">Tu parada para disfrutar del sabor del kebab. Ven a comer con nosotros o llámanos y prepara tu pedido para llevar.</p>
+   <div class="cta">
+    <a class="btn y" href="#menu">Ver menú ↓</a>
+    <a class="btn" href="tel:+34868150377">Llamar para pedir</a>
+   </div>
+   <div class="chips"><span><b>●</b> Comer aquí</span><span><b>➜</b> Para llevar</span><a href="tel:+34868150377"><b>☎</b> 868 150 377</a></div>
+  </div>
+  <div class="disc">
+   <div id="durum3d" role="img" aria-label="Kebab girando en 3D. Arrastra para moverlo"><img src="imagenes/plato-kebab.jpg" alt="Plato de kebab con patatas"></div>
+   <p class="hint">Arrastra el kebab para girarlo</p>
+  </div>
+ </div>
+</section>
+
+<section id="menu">
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">Recién preparado</span>
+   <h2>NUESTRO MENÚ</h2>
+   <p>Algunas de las opciones del restaurante, con los precios del tablón.</p>
+  </div>
+  <div class="grid">
+   <article class="card"><img src="imagenes/plato-kebab.jpg" alt="Plato de kebab con patatas" loading="lazy"><div><h3>Plato kebab</h3><p>Carne de kebab con patatas y acompañamiento.</p><span class="price">7,00€ <a href="tel:+34868150377">Pedir</a></span></div></article>
+   <article class="card"><img src="imagenes/durum-kebab.jpg" alt="Durum kebab con patatas y salsas" loading="lazy"><div><h3>Durum kebab</h3><p>Durum enrollado con carne, verduras y salsas.</p><span class="price">5,50€ <small>XL 7,50€</small> <a href="tel:+34868150377">Pedir</a></span></div></article>
+   <article class="card"><img src="imagenes/plato-gratinado.jpg" alt="Sultán gratinado en cazuela" loading="lazy"><div><h3>Sultán gratinado</h3><p>Cazuela gratinada con queso fundido.</p><span class="price">7,50€ <a href="tel:+34868150377">Pedir</a></span></div></article>
+   <article class="card"><img src="imagenes/bocados-pollo.jpg" alt="Nuggets o bocados de pollo" loading="lazy" style="object-position:50% 60%"><div><h3>Bocados de pollo</h3><p>Porción de bocados crujientes de pollo.</p><span class="price">4,50€ <a href="tel:+34868150377">Pedir</a></span></div></article>
+   <article class="card"><img src="imagenes/pizza.jpg" alt="Pizza preparada" loading="lazy" style="object-position:50% 58%"><div><h3>Pizza</h3><p>Pizza preparada para disfrutar en el local.</p><span class="price">Consultar <a href="tel:+34868150377">Llamar</a></span></div></article>
+   <article class="card"><img src="imagenes/tacos.jpg" alt="Tacos, la novedad del local" loading="lazy" style="object-position:50% 62%"><div><h3>Tacos</h3><p>La novedad del local, para probar.</p><span class="price">Consultar <a href="tel:+34868150377">Llamar</a></span></div></article>
+   <article class="card"><img src="imagenes/carta-flyer.jpg" alt="Carta del restaurante" loading="lazy" style="object-position:50% 25%"><div><h3>Carta completa</h3><p>Todas las opciones y precios, en una sola lista.</p><span class="price"><a href="#carta">Ver carta ↓</a></span></div></article>
+  </div>
+ </div>
+</section>
+
+<section id="carta" style="padding-top:0">
+ <div class="wrap">
+  <div class="carta">
+   <img src="imagenes/carta-flyer.jpg" alt="Carta de Don Kebab Roldán con fotos y extras" loading="lazy">
+   <div>
+    <span class="eyebrow">La carta del restaurante</span>
+    <h2>Precios del tablón</h2>
+    <ul class="list">
+     <li data-p="5,50€">Pita</li><li data-p="5,50€">Durum</li><li data-p="7,50€">Durum XL</li>
+     <li data-p="7,00€">Plato</li><li data-p="7,50€">Sultán</li><li data-p="4,50€">Falafel</li>
+     <li data-p="5,50€">Hamburguesa</li><li data-p="4,50€">Nugget</li><li data-p="4,00€">Rollitos de queso</li>
+     <li data-p="2,00€">Patatas</li><li data-p="1,40€">Refrescos</li>
+    </ul>
+    <p class="xtra"><b>Extras:</b> queso 0,50€ · carne 1,00€ · salsa 0,50€ · arroz 0,50€ · patatas 0,50€ · gratinadas 5,00€</p>
+    <a class="btn y" href="tel:+34868150377">☎ Llamar para pedir</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="galeria">
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">Un vistazo al restaurante</span>
+   <h2>NUESTRO LOCAL</h2>
+   <p>Fotografías reales de Don Kebab Roldán.</p>
+  </div>
+  <div class="gal">
+   <figure><img src="imagenes/fachada.jpg" alt="Fachada de Don Kebab" loading="lazy"><figcaption>La fachada</figcaption></figure>
+   <figure><img src="imagenes/fachada-noche.jpg" alt="Entrada del local de noche" loading="lazy"><figcaption>De noche</figcaption></figure>
+   <figure><img src="imagenes/mostrador.jpg" alt="Mostrador del restaurante" loading="lazy" style="object-position:50% 40%"><figcaption>Mostrador</figcaption></figure>
+   <figure><img src="imagenes/zona-atencion.jpg" alt="Zona de atención y comedor" loading="lazy"><figcaption>Zona de atención</figcaption></figure>
+   <figure><img src="imagenes/interior.jpg" alt="Interior del local" loading="lazy"><figcaption>Interior</figcaption></figure>
+   <figure><img src="imagenes/esquina-noche.jpg" alt="Esquina del local de noche" loading="lazy"><figcaption>Esquina</figcaption></figure>
+   <figure><img src="imagenes/vista-exterior.jpg" alt="Vista exterior del local" loading="lazy"><figcaption>Exterior</figcaption></figure>
+   <figure><img src="imagenes/tablon-menu.jpg" alt="Tablón de menú del local" loading="lazy"><figcaption>El menú</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section id="contacto" style="padding-bottom:60px">
+ <div class="wrap">
+  <div class="call">
+   <div>
+    <span class="eyebrow">¿Tienes hambre?</span>
+    <h2>TU PEDIDO EMPIEZA CON UNA LLAMADA</h2>
+    <p>Llama a Don Kebab Roldán para pedir para llevar o consultar cualquier detalle.</p>
+   </div>
+   <a class="btn y" href="tel:+34868150377">☎ 868 150 377</a>
+  </div>
+  <div class="hor"><h3>Horario</h3><ul><li><b>Lunes</b><span>12:30–16:00 · 19:00–23:30</span></li><li><b>Martes</b><span>12:30–16:00 · 19:00–23:30</span></li><li class="off"><b>Miércoles</b><span>Cerrado</span></li><li><b>Jueves</b><span>12:30–16:00 · 19:00–23:30</span></li><li><b>Viernes</b><span>12:30–16:00 · 19:00–23:30</span></li><li><b>Sábado</b><span>12:30–16:00 · 19:00–23:30</span></li><li><b>Domingo</b><span>12:30–16:00 · 19:00–23:30</span></li></ul></div>
+ </div>
+</section>
 </main>
-<footer><div class="wrap"><div class="footer-grid"><div><div class="footer-brand">♛ DON KEBAB<br><span style="font-size:13px;letter-spacing:5px">ROLDÁN</span></div><p>Kebab, durum y platos para disfrutar.</p></div><div><h4>Contacto</h4><p><a href="tel:+34868782681">868 78 26 81</a><br>Roldán, Murcia</p></div><div><h4>Servicios</h4><p>Comer en el local<br>Pedidos para llevar</p></div><div><h4>Horario</h4><p>Consulta el horario actualizado por teléfono.</p></div></div><div class="copyright"><span>© <span id="year"></span> Don Kebab Roldán</span><span>Hecho para disfrutar del buen kebab.</span></div></div></footer>
-<div class="mobile-call"><a class="btn btn-gold" href="tel:+34868782681">☎ &nbsp; Llamar y pedir · 868 78 26 81</a></div>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body></html>
+
+<footer>
+ <div class="wrap">
+  <div class="f">
+   <div><span class="logo" style="font-size:1.4rem">DON KEBAB</span><p style="margin-top:.6rem">Kebab, durum y platos para disfrutar.</p></div>
+   <div><h4>Contacto</h4><p><a href="tel:+34868150377">868 150 377</a></p><p>Avenida Murcia, 30709 Roldán (Torre-Pacheco)</p></div>
+   <div><h4>Servicios</h4><p>Comer en el local</p><p>Pedidos para llevar</p></div>
+   <div><h4>Horario</h4><p>Jueves a martes: 12:30–16:00 y 19:00–23:30.</p><p>Miércoles cerrado por descanso del personal, excepto festivos.</p></div>
+  </div>
+  <div class="legal"><span>© 2026 Don Kebab Roldán</span><span>Hecho para disfrutar del buen kebab.</span></div>
+ </div>
+</footer>
+
+<div id="lb" role="dialog" aria-label="Foto ampliada"><img alt=""></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+/* Ampliar fotos */
+const lb=document.getElementById('lb'),lbi=lb.querySelector('img');
+document.querySelectorAll('.card img,.carta img,.gal figure').forEach(el=>el.addEventListener('click',e=>{
+  const im=el.tagName==='IMG'?el:el.querySelector('img');
+  lbi.src=im.src;lbi.alt=im.alt;lb.classList.add('on');
+}));
+lb.onclick=()=>lb.classList.remove('on');
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+
+/* Kebab giratorio 3D (cono de carne) + vídeo real opcional */
+(function(){
+ const box=document.getElementById('durum3d');
+ let stop=false;
+ /* Si existe imagenes/kebab.mp4 (vídeo real), sustituye al 3D */
+ const v=document.createElement('video');
+ v.src='imagenes/kebab.mp4';v.muted=true;v.loop=true;v.autoplay=true;v.playsInline=true;
+ v.addEventListener('loadeddata',()=>{stop=true;box.innerHTML='';box.appendChild(v);v.play()});
+ if(!window.THREE)return;
+ try{
+  const W=box.clientWidth,H=box.clientHeight;
+  const r=new THREE.WebGLRenderer({antialias:true,alpha:true});
+  r.setPixelRatio(Math.min(devicePixelRatio,2));r.setSize(W,H);
+  box.innerHTML='';box.appendChild(r.domElement);
+  const maxA=r.capabilities.getMaxAnisotropy();
+  const s=new THREE.Scene(),cam=new THREE.PerspectiveCamera(30,W/H,.1,50);
+  cam.position.set(0,.5,10.5);cam.lookAt(0,0,0);
+  s.add(new THREE.AmbientLight(0xffe2c0,.55));
+  const key=new THREE.DirectionalLight(0xfff0d8,1.1);key.position.set(3,4,6);s.add(key);
+  const fire=new THREE.PointLight(0xff5a1a,2.2,14);fire.position.set(3.2,0,2.5);s.add(fire);
+  const rim=new THREE.PointLight(0xf5b324,1,14);rim.position.set(-4,2,-3);s.add(rim);
+  const tex=(w,h,f)=>{const c=document.createElement('canvas');c.width=w;c.height=h;f(c.getContext('2d'),w,h);const t=new THREE.CanvasTexture(c);t.anisotropy=maxA;t.wrapS=THREE.RepeatWrapping;return t};
+  /* Textura de carne en capas: 2048×4096 */
+  const meat=tex(2048,4096,(g,w,h)=>{
+   const cols=['#b57a45','#9c5f2b','#c48a52','#8a4a1c','#d09a62','#a5612b','#7d4420'];
+   for(let y=0;y<h;){
+    const hh=26+Math.random()*70;
+    g.fillStyle=cols[Math.random()*cols.length|0];g.fillRect(0,y,w,hh);
+    for(let i=0;i<90;i++){g.fillStyle='rgba('+(60+Math.random()*90|0)+','+(25+Math.random()*35|0)+',10,'+(.08+Math.random()*.22)+')';g.fillRect(Math.random()*w,y,10+Math.random()*120,hh*(.3+Math.random()*.7))}
+    g.fillStyle='rgba(255,226,160,.22)';g.fillRect(0,y,w,3);
+    g.fillStyle='rgba(30,12,4,.35)';g.fillRect(0,y+hh-3,w,3);
+    y+=hh;
+   }
+   for(let i=0;i<30000;i++){const l=Math.random()<.5;g.fillStyle='rgba('+(l?250:35)+','+(l?215:15)+','+(l?150:5)+','+Math.random()*.14+')';g.fillRect(Math.random()*w,Math.random()*h,1+Math.random()*4,1+Math.random()*9)}
+   const gr=g.createLinearGradient(0,0,0,h);
+   gr.addColorStop(0,'rgba(35,12,4,.5)');gr.addColorStop(.16,'rgba(35,12,4,0)');gr.addColorStop(.86,'rgba(35,12,4,0)');gr.addColorStop(1,'rgba(35,12,4,.55)');
+   g.fillStyle=gr;g.fillRect(0,0,w,h);
+  });
+  /* Cono con capas irregulares */
+  const geo=new THREE.CylinderGeometry(1.05,.55,3.2,128,220,false);
+  const pos=geo.attributes.position;
+  for(let i=0;i<pos.count;i++){
+   const x=pos.getX(i),y=pos.getY(i),z=pos.getZ(i),rad=Math.hypot(x,z);
+   if(rad<.01)continue;
+   const a=Math.atan2(z,x);
+   const k=1+.05*Math.sin(y*13+Math.sin(a*3)*1.6)+.03*Math.sin(a*5+y*3.1)+.018*Math.sin(y*41+a*7);
+   pos.setXYZ(i,x*k,y,z*k);
+  }
+  geo.computeVertexNormals();
+  const kebab=new THREE.Mesh(geo,new THREE.MeshStandardMaterial({map:meat,bumpMap:meat,bumpScale:5,roughness:.5,metalness:.02}));
+  const spin=new THREE.Group();spin.add(kebab);s.add(spin);
+  /* Pincho y base de acero */
+  const steel=new THREE.MeshStandardMaterial({color:0xd5d9dc,metalness:.6,roughness:.28});
+  const rod=new THREE.Mesh(new THREE.CylinderGeometry(.045,.045,4.7,24),steel);spin.add(rod);
+  const plate=new THREE.Mesh(new THREE.CylinderGeometry(.95,.95,.07,64),steel);plate.position.y=-1.64;spin.add(plate);
+  const cap=new THREE.Mesh(new THREE.CylinderGeometry(.14,.14,.09,24),steel);cap.position.y=1.64;spin.add(cap);
+  const grip=new THREE.Mesh(new THREE.CylinderGeometry(.09,.09,.5,20),new THREE.MeshStandardMaterial({color:0x222222,roughness:.6}));grip.position.y=-2.1;spin.add(grip);
+  spin.position.y=-.1;spin.rotation.x=.12;
+  let drag=false,lx=0,sp=.011,t=0;
+  box.addEventListener('pointerdown',e=>{drag=true;lx=e.clientX;box.setPointerCapture(e.pointerId)});
+  box.addEventListener('pointerup',()=>drag=false);
+  box.addEventListener('pointermove',e=>{if(!drag)return;spin.rotation.y+=(e.clientX-lx)*.012;lx=e.clientX});
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  (function loop(){if(stop)return;requestAnimationFrame(loop);t+=.03;if(!drag&&!reduce)spin.rotation.y+=sp;fire.intensity=2.1+Math.sin(t*2.3)*.25;r.render(s,cam)})();
+  addEventListener('resize',()=>{const w=box.clientWidth,h=box.clientHeight;r.setSize(w,h);cam.aspect=w/h;cam.updateProjectionMatrix()});
+ }catch(e){console.warn('3D no disponible',e)}
+})();
+</script>
+</body>
+</html>
