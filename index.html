@@ -45,6 +45,9 @@ h1{font-size:clamp(4rem,9vw,7rem);letter-spacing:-.01em;margin:.6rem 0 .2rem}
 #durum3d{position:absolute;inset:0;cursor:grab;touch-action:pan-y}
 #durum3d:active{cursor:grabbing}
 #durum3d img,#durum3d video{width:100%;height:100%;object-fit:contain;-webkit-mask-image:radial-gradient(closest-side,#000 70%,transparent 100%);mask-image:radial-gradient(closest-side,#000 70%,transparent 100%)}
+.dos{margin-top:1.1rem;font-size:.82rem;color:var(--m);max-width:34rem}
+.dos b{color:var(--t)}
+.dos a{color:var(--y);font-weight:700}
 .hint{position:absolute;bottom:-1.6rem;left:0;right:0;text-align:center;font-size:.7rem;color:var(--m)}
 /* secciones */
 section{padding:96px 0}
@@ -103,10 +106,40 @@ footer p{margin-bottom:.3rem}
 .estado.off{color:#e8604c}
 .nota{font-size:.72rem;color:var(--m);margin-top:.7rem}
 .legal{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2.4rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.7rem;color:var(--m)}
+/* pedido */
+.pedido{display:grid;grid-template-columns:1.2fr .8fr;gap:1.6rem;align-items:start}
+.pbox{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:1.6rem}
+.pbox h3{font-size:1.5rem;margin-bottom:1rem}
+.pl{list-style:none;padding:0}
+.pl li{display:flex;align-items:center;gap:.8rem;padding:.55rem 0;border-bottom:1px dotted #333;font-size:.95rem}
+.pl .n{flex:1}
+.pl .p{color:var(--y);font-weight:700;white-space:nowrap}
+.q{display:flex;align-items:center;gap:.5rem}
+.q button{width:32px;height:32px;border-radius:50%;border:1px solid #fff5;background:none;color:var(--t);font-size:1.1rem;line-height:1;cursor:pointer}
+.q button:hover{border-color:var(--y);color:var(--y)}
+.q span{min-width:1.4rem;text-align:center;font-weight:700}
+.sep{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--y);font-weight:700;margin:1.4rem 0 .2rem}
+.pbox label{display:block;font-size:.78rem;color:var(--m);margin:.8rem 0 .3rem}
+.pbox input,.pbox textarea,.pbox select{width:100%;background:#0b0c0c;border:1px solid var(--line);border-radius:10px;color:var(--t);padding:.7rem .8rem;font:inherit}
+.pbox textarea{resize:vertical;min-height:70px}
+.lab2{font-size:.78rem;color:var(--m);margin:.8rem 0 .3rem}
+.tipo{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.tipo button{border:1px solid var(--line);background:#0b0c0c;color:var(--t);border-radius:10px;padding:.75rem .5rem;font:700 .78rem Inter,system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.tipo button:hover{border-color:var(--y)}
+.tipo button.on{background:var(--y);border-color:var(--y);color:#111}
+.pbox select{color-scheme:dark;cursor:pointer}
+.res{margin-bottom:.4rem;font-size:.9rem;color:var(--m)}
+.res div{display:flex;justify-content:space-between;gap:1rem;padding:.2rem 0;color:var(--t)}
+.tot{display:flex;justify-content:space-between;font:700 1.6rem 'Barlow Condensed';color:var(--y);border-top:1px solid var(--line);padding-top:.8rem;margin:.6rem 0 .4rem}
+.aviso{font-size:.76rem;color:var(--m);margin-top:.8rem}
+.aviso.mal{color:#e8604c}
+#barra{position:fixed;left:50%;bottom:16px;transform:translateX(-50%) translateY(160%);z-index:60;transition:.3s;display:flex;align-items:center;gap:1rem;background:var(--y);color:#111;padding:.6rem .7rem .6rem 1.2rem;border-radius:99px;font-weight:700;font-size:.82rem;box-shadow:0 8px 30px #000a}
+#barra.on{transform:translateX(-50%) translateY(0)}
+#barra a{background:#111;color:var(--y);border-radius:99px;padding:.5rem 1rem;font-size:.74rem;letter-spacing:.04em;text-transform:uppercase}
 #lb{position:fixed;inset:0;background:#000d;z-index:99;display:none;align-items:center;justify-content:center;padding:1rem;cursor:zoom-out}
 #lb.on{display:flex}
 #lb img{max-height:92vh;max-width:96vw;border-radius:10px;object-fit:contain}
-@media(max-width:900px){nav{display:none}#inicio .wrap,.carta{grid-template-columns:1fr}.card{width:calc(50% - .5rem);min-width:0}.gal{grid-template-columns:1fr 1fr}.f{grid-template-columns:1fr 1fr}.hd-r .tel{display:none}#inicio{padding-top:100px}}
+@media(max-width:900px){.pedido{grid-template-columns:1fr}nav{display:none}#inicio .wrap,.carta{grid-template-columns:1fr}.card{width:calc(50% - .5rem);min-width:0}.gal{grid-template-columns:1fr 1fr}.f{grid-template-columns:1fr 1fr}.hd-r .tel{display:none}#inicio{padding-top:100px}}
 @media(max-width:520px){.list{grid-template-columns:1fr}.card div{padding:.8rem}.f{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
@@ -124,7 +157,7 @@ footer p{margin-bottom:.3rem}
   </nav>
   <div class="hd-r">
    <a class="tel" href="tel:+34868150377">☎ 868 150 377</a>
-   <a class="btn" href="tel:+34868150377">☎ Pedir ahora</a>
+   <a class="btn" href="#pedido">Pedir ahora</a>
   </div>
  </div>
 </header>
@@ -140,7 +173,9 @@ footer p{margin-bottom:.3rem}
    <div class="cta">
     <a class="btn y" href="#menu">Ver menú ↓</a>
     <a class="btn" href="tel:+34868150377">Llamar para pedir</a>
+    <a class="btn" href="#pedido">Haz tu pedido y recógelo en el local</a>
    </div>
+   <p class="dos">Dos formas de pedir: <b>desde la web</b> (nos llega por WhatsApp) o <b>llamando</b> al <a href="tel:+34868150377">868 150 377</a>. En las dos, recoges tu pedido en el local.</p>
    <div class="chips"><span><b>●</b> Comer aquí</span><span><b>➜</b> Para llevar</span><a href="tel:+34868150377"><b>☎</b> 868 150 377</a></div>
   </div>
   <div class="disc">
@@ -158,10 +193,10 @@ footer p{margin-bottom:.3rem}
    <p>Algunas de las opciones del restaurante, con los precios del tablón.</p>
   </div>
   <div class="grid">
-   <article class="card"><img src="plato-kebab.jpg" alt="Plato de kebab con patatas" loading="lazy"><div><h3>Plato kebab</h3><p>Carne de kebab con patatas y acompañamiento.</p><span class="price">7,00€ <a href="tel:+34868150377">Pedir</a></span></div></article>
-   <article class="card"><img src="durum-kebab.jpg" alt="Durum kebab con patatas y salsas" loading="lazy"><div><h3>Durum kebab</h3><p>Durum enrollado con carne, verduras y salsas.</p><span class="price">5,50€ <small>XL 7,50€</small> <a href="tel:+34868150377">Pedir</a></span></div></article>
-   <article class="card"><img src="plato-gratinado.jpg" alt="Sultán gratinado en cazuela" loading="lazy"><div><h3>Sultán gratinado</h3><p>Cazuela gratinada con queso fundido.</p><span class="price">7,50€ <a href="tel:+34868150377">Pedir</a></span></div></article>
-   <article class="card"><img src="bocados-pollo.jpg" alt="Nuggets o bocados de pollo" loading="lazy" style="object-position:50% 60%"><div><h3>Bocados de pollo</h3><p>Porción de bocados crujientes de pollo.</p><span class="price">4,50€ <a href="tel:+34868150377">Pedir</a></span></div></article>
+   <article class="card"><img src="plato-kebab.jpg" alt="Plato de kebab con patatas" loading="lazy"><div><h3>Plato kebab</h3><p>Carne de kebab con patatas y acompañamiento.</p><span class="price">7,00€ <a href="#pedido">Pedir</a></span></div></article>
+   <article class="card"><img src="durum-kebab.jpg" alt="Durum kebab con patatas y salsas" loading="lazy"><div><h3>Durum kebab</h3><p>Durum enrollado con carne, verduras y salsas.</p><span class="price">5,50€ <small>XL 7,50€</small> <a href="#pedido">Pedir</a></span></div></article>
+   <article class="card"><img src="plato-gratinado.jpg" alt="Sultán gratinado en cazuela" loading="lazy"><div><h3>Sultán gratinado</h3><p>Cazuela gratinada con queso fundido.</p><span class="price">7,50€ <a href="#pedido">Pedir</a></span></div></article>
+   <article class="card"><img src="bocados-pollo.jpg" alt="Nuggets o bocados de pollo" loading="lazy" style="object-position:50% 60%"><div><h3>Bocados de pollo</h3><p>Porción de bocados crujientes de pollo.</p><span class="price">4,50€ <a href="#pedido">Pedir</a></span></div></article>
    <article class="card"><img src="pizza.jpg" alt="Pizza preparada" loading="lazy" style="object-position:50% 58%"><div><h3>Pizza</h3><p>Pizza preparada para disfrutar en el local.</p><span class="price">Consultar <a href="tel:+34868150377">Llamar</a></span></div></article>
    <article class="card"><img src="tacos.jpg" alt="Tacos, la novedad del local" loading="lazy" style="object-position:50% 62%"><div><h3>Tacos</h3><p>La novedad del local, para probar.</p><span class="price">Consultar <a href="tel:+34868150377">Llamar</a></span></div></article>
    <article class="card"><img src="carta-flyer.jpg" alt="Carta del restaurante" loading="lazy" style="object-position:50% 25%"><div><h3>Carta completa</h3><p>Todas las opciones y precios, en una sola lista.</p><span class="price"><a href="#carta">Ver carta ↓</a></span></div></article>
@@ -184,6 +219,41 @@ footer p{margin-bottom:.3rem}
     </ul>
     <p class="xtra"><b>Extras:</b> queso 0,50€ · carne 1,00€ · salsa 0,50€ · arroz 0,50€ · patatas 0,50€ · gratinadas 5,00€</p>
     <a class="btn y" href="tel:+34868150377">☎ Llamar para pedir</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="pedido" style="padding-top:0">
+ <div class="wrap">
+  <div class="head">
+   <span class="eyebrow">Para llevar o comer en el local</span>
+   <h2>HAZ TU PEDIDO</h2>
+   <p>Elige lo que quieres y envíanos el pedido por WhatsApp. Lo preparamos y pasas por el local a recogerlo o a comerlo aquí. ¿Prefieres llamar? Es el 868 150 377: nos dices el pedido y lo recoges igual.</p>
+  </div>
+  <div class="pedido">
+   <div class="pbox">
+    <h3>Elige tu pedido</h3>
+    <div id="lista"></div>
+   </div>
+   <div class="pbox">
+    <h3>Tu pedido</h3>
+    <div id="resumen" class="res">Todavía no has añadido nada.</div>
+    <div class="tot"><span>Total</span><span id="total">0,00€</span></div>
+    <div class="lab2" id="tipoLab">¿Cómo lo quieres?</div>
+    <div class="tipo" role="radiogroup" aria-labelledby="tipoLab">
+     <button type="button" class="on" role="radio" aria-checked="true" data-t="Para llevar">Para llevar</button>
+     <button type="button" role="radio" aria-checked="false" data-t="Para comer en el local">Comer en el local</button>
+    </div>
+    <label for="nombre">Nombre y apellidos</label>
+    <input id="nombre" type="text" autocomplete="name" maxlength="60" placeholder="Nombre y apellidos">
+    <label for="hora">Hora a la que pasarás por el local</label>
+    <select id="hora"></select>
+    <label for="notas">Notas (opcional)</label>
+    <textarea id="notas" maxlength="300" placeholder="Sin cebolla, salsa picante..."></textarea>
+    <button class="btn y" id="enviar" type="button" style="width:100%;justify-content:center;margin-top:1rem">Enviar pedido por WhatsApp</button>
+    <p class="aviso" id="aviso"></p>
+    <p class="aviso">Se abrirá WhatsApp con tu pedido ya escrito. Pulsa enviar en el chat para terminar. En los dos casos pasas por el local: no hacemos envíos a domicilio.</p>
    </div>
   </div>
  </div>
@@ -249,6 +319,8 @@ footer p{margin-bottom:.3rem}
  </div>
 </footer>
 
+<div id="barra" role="status"><span id="barraTxt"></span><a href="#pedido">Ver pedido</a></div>
+
 <div id="lb" role="dialog" aria-label="Foto ampliada"><img alt=""></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -262,7 +334,7 @@ document.querySelectorAll('.card img,.carta img,.gal figure').forEach(el=>el.add
 lb.onclick=()=>lb.classList.remove('on');
 addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
 
-/* Horario: marca el día de hoy y muestra si está abierto, en directo */
+/* Horario: marca el día de hoy y muestra si está abierto */
 (function(){
  const e=document.getElementById('estado');
  if(!e)return;
@@ -295,6 +367,78 @@ addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
  actualizar();
  setInterval(actualizar,30000);
  document.addEventListener('visibilitychange',()=>{if(!document.hidden)actualizar()});
+})();
+
+/* Pedido por WhatsApp */
+(function(){
+ const WHATSAPP='34666258717'; /* número de WhatsApp del local, con 34 delante y sin espacios ni + */
+ const PRODUCTOS=[['Pita',5.5],['Durum',5.5],['Durum XL',7.5],['Plato kebab',7],['Sultán',7.5],['Falafel',4.5],['Hamburguesa',5.5],['Nuggets',4.5],['Rollitos de queso',4],['Patatas',2],['Refresco',1.4]];
+ const EXTRAS=[['Extra queso',.5],['Extra carne',1],['Extra salsa',.5],['Extra arroz',.5],['Extra patatas',.5]];
+ const TRAMOS=[[750,960],[1140,1410]]; /* 12:30–16:00 y 19:00–23:30 */
+ const CERRADO=3; /* miércoles */
+ const cant={};
+ const todos=PRODUCTOS.concat(EXTRAS);
+ const $=id=>document.getElementById(id);
+ const fmt=n=>n.toFixed(2).replace('.',',')+'€';
+ const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+ function fila(p){return '<li><span class="n">'+esc(p[0])+'</span><span class="p">'+fmt(p[1])+'</span><span class="q"><button type="button" data-k="'+esc(p[0])+'" data-d="-1" aria-label="Quitar '+esc(p[0])+'">−</button><span id="c-'+esc(p[0])+'">0</span><button type="button" data-k="'+esc(p[0])+'" data-d="1" aria-label="Añadir '+esc(p[0])+'">+</button></span></li>'}
+ $('lista').innerHTML='<ul class="pl">'+PRODUCTOS.map(fila).join('')+'</ul><div class="sep">Extras</div><ul class="pl">'+EXTRAS.map(fila).join('')+'</ul>';
+
+ function lineas(){return todos.filter(p=>cant[p[0]]>0).map(p=>({n:p[0],q:cant[p[0]],t:cant[p[0]]*p[1]}))}
+ function pintar(){
+  const ls=lineas(),tot=ls.reduce((a,l)=>a+l.t,0),uds=ls.reduce((a,l)=>a+l.q,0);
+  todos.forEach(p=>{const e=document.getElementById('c-'+p[0]);if(e)e.textContent=cant[p[0]]||0});
+  $('resumen').innerHTML=ls.length?ls.map(l=>'<div><span>'+l.q+' × '+esc(l.n)+'</span><span>'+fmt(l.t)+'</span></div>').join(''):'Todavía no has añadido nada.';
+  $('total').textContent=fmt(tot);
+  $('barraTxt').textContent=uds+(uds===1?' producto':' productos')+' · '+fmt(tot);
+  barra();
+ }
+ let tipo='Para llevar';
+ $('lista').parentNode.parentNode.querySelectorAll('.tipo button').forEach(b=>b.addEventListener('click',()=>{tipo=b.dataset.t;b.parentNode.querySelectorAll('button').forEach(x=>{const on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-checked',on)})}));
+ let visible=false;
+ function barra(){$('barra').classList.toggle('on',lineas().length>0&&!visible)}
+ new IntersectionObserver(es=>{visible=es[0].isIntersecting;barra()},{threshold:.15}).observe($('pedido'));
+
+ $('lista').addEventListener('click',e=>{
+  const b=e.target.closest('button[data-k]');if(!b)return;
+  const k=b.dataset.k;cant[k]=Math.max(0,Math.min(20,(cant[k]||0)+(+b.dataset.d)));pintar();
+ });
+
+ function ahora(){const a=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Madrid'}));return{dia:a.getDay(),min:a.getHours()*60+a.getMinutes()}}
+ function abierto(){const a=ahora();return a.dia!==CERRADO&&TRAMOS.some(t=>a.min>=t[0]&&a.min<t[1])}
+ function msg(t,mal){const a=$('aviso');a.textContent=t;a.classList.toggle('mal',!!mal)}
+ if(!abierto())msg('Ahora el local está cerrado. Puedes dejar el pedido y lo verán cuando abran.');
+
+ /* Horas de recogida: cada PASO minutos dentro del horario */
+ const PASO=5,DESPUES_ABRIR=10,ANTES_CERRAR=10,ANTELACION=15;
+ const hh=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+ function grupos(){
+  const a=ahora();if(a.dia===CERRADO)return [];
+  const desde=a.min+ANTELACION;
+  return TRAMOS.map((t,i)=>{const hs=[];for(let m=t[0]+DESPUES_ABRIR;m<=t[1]-ANTES_CERRAR;m+=PASO){if(m>=desde)hs.push(hh(m))}return{n:i?'Noche':'Mediodía',hs}}).filter(g=>g.hs.length);
+ }
+ function pintarHoras(){
+  const sel=$('hora'),prev=sel.value,gs=grupos();
+  sel.innerHTML='<option value="">Lo antes posible'+(abierto()?'':' (cuando abramos)')+'</option>'+gs.map(g=>'<optgroup label="'+g.n+'">'+g.hs.map(h=>'<option value="'+h+'">'+h+'</option>').join('')+'</optgroup>').join('');
+  if(gs.some(g=>g.hs.includes(prev)))sel.value=prev;
+ }
+ pintarHoras();setInterval(pintarHoras,60000);
+
+ $('enviar').addEventListener('click',()=>{
+  const ls=lineas(),nombre=$('nombre').value.trim(),hora=$('hora').value,notas=$('notas').value.trim();
+  if(!ls.length){msg('Añade al menos un producto.',1);return}
+  if(nombre.split(/\s+/).filter(w=>w.length>1).length<2){msg('Escribe tu nombre y apellidos para que sepamos de quién es el pedido.',1);$('nombre').focus();return}
+  if(hora&&!grupos().some(g=>g.hs.includes(hora))){msg('Esa hora ya no está disponible. Elige otra.',1);pintarHoras();return}
+  if(!/^\d{9,15}$/.test(WHATSAPP)){msg('Falta configurar el número de WhatsApp del local.',1);return}
+  const tot=ls.reduce((a,l)=>a+l.t,0);
+  let t='Hola, quiero hacer un pedido en Don Kebab Roldán:\n\n'+ls.map(l=>'• '+l.q+' x '+l.n+' ('+fmt(l.t)+')').join('\n')+'\n\nTotal: '+fmt(tot)+'\nTipo de pedido: '+tipo+'\nNombre y apellidos: '+nombre+'\nHora a la que pasará: '+(hora||'lo antes posible');
+  if(notas)t+='\nNotas: '+notas;
+  t+='\n\n(Pedido hecho desde la web)';
+  window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(t),'_blank','noopener');
+  msg('Se ha abierto WhatsApp con tu pedido. Pulsa enviar en el chat para terminarlo.');
+ });
+ pintar();
 })();
 
 /* Kebab giratorio 3D (cono de carne) + vídeo real opcional */
